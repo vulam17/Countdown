@@ -143,7 +143,11 @@
     function change()
     {
         now = new Date()
-        if((des.getDate() > now.getDate()) || ((des.getDate() == now.getDate()) && (des.getHours() >= now.getHours())))
+        if((des.getDate() > now.getDate()) 
+        || ((des.getDate() == now.getDate()) 
+        && (des.getHours() >= now.getHours()) 
+        && (des.getMinutes() >= now.getMinutes()) 
+        && (des.getSeconds() >= now.getSeconds()))) 
         {
             month = (des.getFullYear() - now.getFullYear()) * 12 + des.getMonth() - now.getMonth()
             temp = new Date(des.getFullYear(), des.getMonth(), now.getDate(), now.getHours(), now.getMinutes(), now.getSeconds())
